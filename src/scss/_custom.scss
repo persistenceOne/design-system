@@ -1,0 +1,117 @@
+@import "./variables";
+
+.dropdown-toggle{
+  background: #181818;
+  border-radius: 1rem;
+  padding: 0.875rem;
+  outline: none !important;
+  border: 0px solid;
+  box-shadow: none !important;
+  &::after{
+    display: none;
+  }
+}
+
+.button-primary {
+  outline: none !important;
+  border: 0px solid;
+  box-shadow: none !important;
+  padding: 0.75rem 1rem;
+  background: radial-gradient(97.89% 704.35% at 51.96% 50%, #C14449 0.01%, #E50913 0.02%, #322D3E 100%);
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  //display: flex;
+  //align-items: center;
+  //text-align: center;
+  color: #F8F8F8;
+  text-transform: uppercase;
+}
+
+.button-disable {
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0.625rem 0.875rem;
+  border: 2px solid $connect-button-border;
+  border-radius: 14px;
+  background: transparent;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  //display: flex;
+  //align-items: center;
+  //text-align: center;
+  color: $text-color-light-secondary;
+  text-transform: capitalize;
+  &.connected{
+    color: #47C28B;
+    border: 2px solid #47C28B;
+  }
+}
+
+.list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .list-label{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: $text-color-light-tertiary;
+    margin: 0;
+  }
+  .list-value{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: $text-color-light-tertiary;
+    margin: 0;
+  }
+}
+
+.icon-button.info {
+  padding-left: 5px;
+  background: no-repeat;
+  border: none;
+  outline: none!important;
+}
+
+.popover{
+  background: #272727;
+  border-radius: 4px;
+  .content{
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+    color: #9C9C9C;
+  }
+}
+.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::before, .bs-popover-bottom>.popover-arrow::before,
+.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::after, .bs-popover-bottom>.popover-arrow::after{
+  border-bottom-color: #272727;
+}
+
+.custom-offcanvas{
+  width: auto;
+  background: rgba(25, 25, 25, 0.7);
+  //z-index: auto;
+  .offcanvas-header{
+    position: relative;
+    padding: 0;
+    .btn-close{
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 1;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+  .offcanvas-body{
+    padding: 0;
+  }
+}
