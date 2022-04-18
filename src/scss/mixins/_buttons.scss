@@ -1,0 +1,90 @@
+// button-variant-mixin start
+@mixin button-variant(
+  $background,
+  $border,
+  $border-image,
+  $color,
+  $shadow,
+  $hover-background,
+  $hover-color,
+  $hover-box-shadow,
+  $hover-border,
+  $hover-border-image,
+  $focus-background,
+  $focus-color,
+  $focus-box-shadow,
+  $focus-border,
+  $focus-border-image,
+  $disabled-background,
+  $disabled-color,
+  $disabled-box-shadow,
+  $disabled-border,
+  $disabled-border-image,
+) {
+  color: $color;
+  background: $background;
+  box-shadow: $shadow;
+  border: $border;
+  border-image-source: $border-image;
+  //@include gradient-bg($background);
+  //border-color: $border;
+  //@include box-shadow($shadow);
+
+  &:hover {
+    color: $hover-color;
+    background: $hover-background;
+    //@include gradient-bg($hover-background);
+    box-shadow: $hover-box-shadow;
+    border: $hover-border;
+    border-image-source: $hover-border-image;
+    border-image-slice: 1;
+    //border-color: $hover-border;
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color:$focus-color;
+    background: $focus-background;
+    box-shadow: $focus-box-shadow;
+    border: $focus-border;
+    border-image-slice: 1;
+    //@if $enable-shadows {
+    //  @include box-shadow($btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5));
+    //} @else {
+    //  // Avoid using mixin so we can pass custom focus shadow properly
+    //  box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5);
+    //}
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color:$focus-color;
+    background: $focus-background;
+    box-shadow: $focus-box-shadow;
+    border: $focus-border;
+    border-image-slice: 1;
+    //background-image: if($enable-gradients, none, null);
+    //border-color: $active-border;
+  }
+
+  &:disabled,
+  &.disabled {
+    color:$disabled-color;
+    background: $disabled-background;
+    box-shadow: $disabled-box-shadow;
+    border: $disabled-border;
+  }
+}
+// scss-docs-end button-variant-mixin
+
+// scss-docs-start button-size-mixin
+@mixin button-size($padding-y, $padding-x, $font-size) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  //// Manually declare to provide an override to the browser default
+  //@include border-radius($border-radius, 0);
+}
+// scss-docs-end button-size-mixin

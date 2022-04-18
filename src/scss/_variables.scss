@@ -1,66 +1,195 @@
-//$white: #fff;
-//$black: #000;
-//$red: #CA2D2D;
 
-$primary-color: #E50913;
-$secondary-color: #101D42;
-//$success-color: #52c41a; // success state color
-//$warning-color: #faad14; // warning state color
-//$error-color: #f5222d; // error state cooler
+//  gray-color-variables start
+$gray-100: #787878;
+$gray-200: #383838;
+$gray-300: #282828;
+$gray-400: #1B1B1B;
+$gray-500: #181818;
+$gray-600: #121212;
+$gray-700: #070B09;
+$black:    #000 ;
+//  gray-color-variables end
 
-//$grey-btn-color: #737373;
-//$input-light-grey-border: #B8B8B8;
-//
-//$text-red: #d90a00; // Red text color
-//$text-white: $white; // Red text color
-//$link-color: $primary-color; // link color
-//$text-light: #727272;
-//
-$body-background: radial-gradient(112.6% 112.6% at 50% -12.6%, #372627 0%, #030303 44.79%);
-//$background-light: #0D0E1F;
-//$gery-light:#E4E4E4;
-//$dark-green:#65A276;
-//$middle-grey:#AEAEAE;
-//$light-border:#F2F2F2;
-//$switch-color:#F9F9F9;
-//$dark-border:#3C3C3C;
-//$input-label-color:#929292;
-//$input-bg: #22233B;
-//
-//$font-family: 'Red Hat Display';
-//$font-size-base: 14px;
-//$font-size-xlg: $font-size-base + 4px; //18px
-//$font-size-lg: $font-size-base + 2px; //16px
-//$font-size-sm: $font-size-base - 2px; //12px
-//
-//$heading-color: rgba(0, 0, 0, 0.85); // heading text color
-//$text-light-color: #ffffff;
-$text-color-light-primary: #ffffff;
-$text-color-light-secondary: #B6B4C1;
-$text-color-light-tertiary:#A9A9A9;
-$text-color-dark-primary: #69696D;
-$text-color-dark-secondary: #474747;
-$text-color-dark-tertiary:#747474;
+//  white-color-variables start
+$white-100: #FCFCFC;
+$white-200: #ECECEC;
+$white-300: #D8D8D8;
+$white-400: #C4C4C4;
+$white-500: #BABABA;
+$white-600: #A6A6A6;
+$white:    #fff ;
+//  white-color-variables end
 
-//$text-color-secondary: rgba(0, 0, 0, 0.45); // secondary text color
-//$disabled-color: rgba(0, 0, 0, 0.25); // disable state color
-//$border-radius-base: 6px; // major border radius
-//$border-color-base: #d9d9d9; // major border color
-//$box-shadow-base: 0px 0px 36.8644px #053b7588; // major shadow for layers
-//
-//$team-circle-gradient: linear-gradient(180deg, #032241 0%, #00060D 100%);
-//
-//
-//$menu-bg : $black;
-//$menu-submenu-bg:$black;
-//$menu-arrow-color:$white;
-//$menu-color:$white;
-//$menu-item-color:$menu-color;
-//
-//$footer-bg: $black;
-//$footer-text-color: #999;
+//  red-color-variables start
+$red-100: #FEE2D5;
+$red-200: #FF858A;
+$red-300: #BF353B;
+$red-400: #9B1117;
+$red-500: #811318;
+// red-color-variables end
 
-//topbar
-$connect-button-border: #322D3E;
-//sidebar
-$sidebar-background :rgba(25, 25, 25, 0.7);
+// theme-color-variables
+//$primary:       $blue !default;
+//$secondary:     $gray-600 !default;
+$success:       #47C28B !default;
+$info:          #3E73F0 !default;
+$warning:       #F9B053 !default;
+$danger:        #DB2438 !default;
+//$light:         $gray-100 !default;
+//$dark:          $gray-900 !default;
+// theme-color-variables
+
+//  text-color-variables start
+$error-text: $danger;
+$success-text: $success;
+$highlighted-text: $white-100;
+$body-text: $white-200;
+$inactive-text: $white-600;
+$disabled-text: $gray-100;
+// text-color-variables end
+
+// scss-docs-start border-radius-variables
+$border-radius:               .375rem !default;
+$border-radius-sm:            .3rem !default;
+$border-radius-lg:            .4.25rem !default;
+$border-radius-pill:          50rem !default;
+// scss-docs-end border-radius-variables
+
+// scss-docs-start font-variables
+//// stylelint-disable value-keyword-case
+//$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+//$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+//// stylelint-enable value-keyword-case
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root:              null !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
+
+$h1-font-size:                $font-size-base * 2.25 !default;
+$h2-font-size:                $font-size-base * 1.875 !default;
+$h3-font-size:                $font-size-base * 1.5 !default;
+$h4-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                $font-size-base !default;
+$h6-font-size:                $font-size-base * 0.875 !default;
+// scss-docs-end font-variables
+
+
+// Shared variables that are reassigned to `$input-` and `$button-` specific variables.
+
+// scss-docs-start input-button-variables
+$input-button-padding-y:         .875rem !default;
+$input-button-padding-x:         .75rem !default;
+$input-button-font-family:       null !default;
+$input-button-font-size:         $font-size-base !default;
+$input-button-line-height:       $line-height-base !default;
+
+$input-button-padding-y-sm:      .625rem !default;
+$input-button-padding-x-sm:      .5rem !default;
+$input-button-font-size-sm:      $font-size-sm !default;
+
+$input-button-padding-y-lg:      .5rem !default;
+$input-button-padding-x-lg:      1rem !default;
+$input-button-font-size-lg:      $font-size-lg !default;
+
+//$input-button-border-width:      $border-width !default;
+// scss-docs-end input-button-variables
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+// scss-docs-start button-variables
+$button-padding-y:               $input-button-padding-y !default;
+$button-padding-x:               $input-button-padding-x !default;
+$button-font-family:             $input-button-font-family !default;
+$button-font-size:               $input-button-font-size !default;
+$button-line-height:             $input-button-line-height !default;
+$button-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
+
+$button-padding-y-sm:            $input-button-padding-y-sm !default;
+$button-padding-x-sm:            $input-button-padding-x-sm !default;
+$button-font-size-sm:            $input-button-font-size-sm !default;
+
+$button-padding-y-lg:            $input-button-padding-y-lg !default;
+$button-padding-x-lg:            $input-button-padding-x-lg !default;
+$button-font-size-lg:            $input-button-font-size-lg !default;
+
+//$button-border-width:            $input-button-border-width !default;
+
+//$button-transition:                color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$button-font-weight:             $font-weight-normal !default;
+
+$button-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+//$button-focus-width:             $input-button-focus-width !default;
+//$button-focus-box-shadow:        $input-button-focus-box-shadow !default;
+$button-disabled-opacity:        .65 !default;
+$button-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+
+$button-variant-bg: radial-gradient(97.89% 704.35% at 51.96% 50%, #C73238 0.01%, #CE242C 0.02%, #77151A 67.71%, #181818 100%);
+$button-variant-color:$white-100;
+$button-variant-border:0px solid;
+$button-variant-box-shadow:none;
+$button-variant-hover-bg: $button-variant-bg;
+$button-variant-hover-color:$white-100;
+$button-variant-hover-box-shadow:  0px 0px 16px rgba(220, 0, 10, 0.7) !default;
+$button-variant-focus-bg: $red-500;
+$button-variant-focus-color: $white-100;
+$button-variant-focus-box-shadow: 0px 4px 10px rgba(128, 14, 19, 0.25) !default;
+$button-variant-loading-bg: #9E3F44;
+$button-variant-loading-color: $white-100;
+//$button-variant-loading-box-shadow: null !default;
+$button-variant-disabled-bg: #4A2A2A;
+$button-variant-disabled-color: $gray-100;
+$button-variant-disabled-box-shadow:none;
+//$button-variant-loading-box-shadow: null !default;
+
+// button secondary styles start
+$button-outline-bg: transparent;
+$button-outline-border:3px solid;
+$button-outline-border-image:radial-gradient(97.89% 704.35% at 51.96% 50%, #C73238 0.01%, #CE242C 0.02%, #77151A 67.71%, #181818 100%);
+$button-outline-color:$white-100;
+$button-outline-box-shadow:none;
+$button-outline-hover-bg: transparent;
+$button-outline-hover-color:$white-100;
+$button-outline-hover-box-shadow: none;
+$button-outline-hover-border: 3px solid;
+$button-outline-hover-border-image:radial-gradient(97.89% 704.35% at 51.96% 50%, #C14449 0.01%, #D20E17 0.02%, #181818 100%);
+$button-outline-focus-bg: transparent;
+$button-outline-focus-color: $white-100;
+$button-outline-focus-box-shadow: none;
+$button-outline-focus-border: 3px solid $red-500;
+$button-outline-focus-border-image:none;
+$button-outline-loading-bg: transparent;
+$button-outline-loading-color: $white-100;
+$button-outline-disabled-bg: transparent;
+$button-outline-disabled-color: $gray-100;
+$button-outline-disabled-box-shadow:none;
+$button-outline-disabled-border: 3px solid #4A2A2A;
+$button-outline-disabled-border-image:none;
+
+// button secondary styles end
+
+//$button-link-color:              $link-color !default;
+//$button-link-hover-color:        $link-hover-color !default;
+//$button-link-disabled-color:     $gray-600 !default;
+
+// Allows for customizing button radius independently from global border radius
+$button-border-radius:           $border-radius !default;
+$button-border-radius-sm:        $border-radius-sm !default;
+$button-border-radius-lg:        $border-radius-lg !default;
+

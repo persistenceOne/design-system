@@ -1,0 +1,136 @@
+.button {
+  display: inline-block;
+  font-family: $button-font-family;
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
+  color: $button-variant-color;
+  text-align: center;
+  white-space: $button-white-space;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 0 solid transparent;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  @include button-size($button-padding-y, $button-padding-x, $button-font-size);
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+}
+
+.button-primary {
+  @include button-variant(
+                  radial-gradient(97.89% 704.35% at 51.96% 50%, #C73238 0.01%, #CE242C 0.02%, #77151A 67.71%, #181818 100%),
+                  0px solid,
+                  none,
+                  $white-100,
+                  none,
+                  radial-gradient(97.89% 704.35% at 51.96% 50%, #C73238 0.01%, #CE242C 0.02%, #77151A 67.71%, #181818 100%),
+                  $white-100,
+                  0px 0px 16px rgba(220, 0, 10, 0.7),
+                  0px solid,
+                  none,
+                  $red-500,
+                  $white-100,
+                  0px 4px 10px rgba(128, 14, 19, 0.25),
+                  0px solid,
+                  none,
+                  #4A2A2A,
+                  $gray-100,
+                  none,
+                  0px solid,
+                  none,
+  )
+}
+
+.button-secondary {
+  position: relative;
+  &::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:6px;
+    padding:3px;
+    background:radial-gradient(97.89% 704.35% at 51.96% 50%, #C73238 0.01%, #CE242C 0.02%, #77151A 67.71%, #181818 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  &:hover {
+    color: $button-outline-hover-color;
+    background: $button-outline-hover-bg;
+    //@include gradient-bg($hover-background);
+    filter: drop-shadow(0px 0px 16px #DC000A);
+    &::after{
+      background: radial-gradient(97.89% 704.35% at 51.96% 50%, #C14449 0.01%, #D20E17 0.02%, #181818 100%);
+
+    }
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color:$button-outline-focus-color;
+    background: $button-outline-focus-bg;
+    &::after{
+      background: $red-500;
+    }
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color:$button-outline-focus-color;
+    background: $button-outline-focus-bg;
+    &::after{
+      background: $red-500;
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    color:$button-outline-disabled-color;
+    background: $button-outline-disabled-bg;
+    &::after{
+      background:$button-variant-disabled-bg;
+    }
+  }
+}
+
+.button-tertiary {
+  //color: $button-outline-color;
+  @include button-variant(
+                  trasparent,
+                  0px solid,
+                  none,
+                  #FCFCFC,
+                  none,
+                  transparent,
+                  #F4878C,
+                  none,
+                  0px,
+                  none,
+                  transparent,
+                  #811318,
+                  none,
+                  0px solid,
+                  none,
+                  transparent,
+                  #6C6C6C,
+                  none,
+                  0px,
+                  none,
+  );
+
+}
+
+.button-lg {
+  @include button-size($button-padding-y-lg, $button-padding-x-lg, $button-font-size-lg);
+}
+
+.button-sm {
+  @include button-size($button-padding-y-sm, $button-padding-x-sm, $button-font-size-sm);
+}
