@@ -28,6 +28,8 @@
 dist/
 .next
 
+*.js
+
 # Compressed archives
 *.7zip
 *.rar
@@ -117,4 +119,3 @@ coverage
 # Yarn Integrity file
 .yarn-integrity
 
-.
