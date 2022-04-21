@@ -1,0 +1,32 @@
+.tabs-container {
+  .nav-tabs{
+    border: 0px solid;
+    li{
+      flex: 1;
+      &:first-child{
+        button{
+          border-radius: $tab-link-border-radius 0 0 $tab-link-border-radius;
+        }
+      }
+      &:last-child{
+        button{
+          border-radius: 0 $tab-link-border-radius  $tab-link-border-radius 0;
+        }
+      }
+      button{
+        width: 100%;
+        background: $tab-link-background;
+        border: 0px solid !important;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        color: $tab-link-color;
+        &.active{
+          background-color: $tab-link-active-background;
+          color: $tab-link-active-color;
+        }
+      }
+    }
+  }
+}

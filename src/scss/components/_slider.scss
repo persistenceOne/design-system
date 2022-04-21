@@ -1,0 +1,18 @@
+.range-slider{
+  .rangeslider-horizontal{
+    height: 8px;
+    .rangeslider__fill{
+      background-color:$slider-finished-background;
+    }
+    .rangeslider__handle{
+      background: $slider-point-background;
+      box-shadow: $slider-point-box-shadow;
+      width: 42px;
+      height: 42px;
+      &::after{
+        background: $slider-point-background;
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-
+$body-background : #1F1F1F;
 //  gray-color-variables start
 $gray-100: #787878;
 $gray-200: #383838;
@@ -26,6 +26,7 @@ $red-200: #FF858A;
 $red-300: #BF353B;
 $red-400: #9B1117;
 $red-500: #811318;
+$red-600: #8C0208;
 // red-color-variables end
 
 // theme-color-variables
@@ -80,12 +81,24 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
+$title-font-size:              $font-size-base * 3;
 $h1-font-size:                $font-size-base * 2.25 !default;
 $h2-font-size:                $font-size-base * 1.875 !default;
 $h3-font-size:                $font-size-base * 1.5 !default;
 $h4-font-size:                $font-size-base * 1.25 !default;
 $h5-font-size:                $font-size-base !default;
 $h6-font-size:                $font-size-base * 0.875 !default;
+
+$p1-font-size:                $font-size-base * 1.5 !default;
+$p2-font-size:                $font-size-base * 1.25 !default;
+$p3-font-size:                $font-size-base !default;
+$p4-font-size:                $font-size-base * 0.875 !default;
+
+
+$sub-title1-font-size:                $font-size-base * 1.125 !default;
+$sub-title2-font-size:                $font-size-base !default;
+
+$font-color : $white-100;
 // scss-docs-end font-variables
 
 
@@ -193,3 +206,97 @@ $button-border-radius:           $border-radius !default;
 $button-border-radius-sm:        $border-radius-sm !default;
 $button-border-radius-lg:        $border-radius-lg !default;
 
+
+// Tabs styles
+$tab-link-padding: 0.75rem;
+$tab-link-border-radius : $border-radius;
+$tab-link-background : $gray-500;
+$tab-link-color : $white-600;
+$tab-link-active-background : $white-200;
+$tab-link-active-color : #181818;
+
+
+// Input field styles
+$input-background : $gray-700;
+$input-border-color: $gray-700;
+$input-color      : $white-100;
+$input-placeholder-color : $white-600;
+$input-border-radius : $border-radius;
+$input-focus-border-color: rgba(252, 252, 252, 0.7);
+$input-focus-box-shadow : 0px 0px 10px rgba(255, 255, 255, 0.25);
+$input-success-box-shadow : 0px 0px 10px rgba(68, 172, 33, 0.25);
+$input-error-box-shadow: 0px 0px 10px rgba(219, 36, 56, 0.25);
+$input-help-text-color:$white-200;
+$input-padding: 1rem;
+$input-dropdown-background: #262626;
+$input-dropdown-search-color: $white-600;
+$input-dropdown-network-name : $white-600;
+$input-dropdown-network-color: $white-600;
+$input-dropdown-item-hover-background: $gray-400;
+$input-dropdown-item-hover-color: $white-200;
+
+
+// modal styles
+
+$modal-background : $gray-300;
+$modal-header-color : $white-100;
+$modal-header-border : 0px solid;
+$modal-body-color : $white-100;
+$modal-header-padding :  2rem 2rem 0 2rem;
+$modal-body-padding : 1rem 2rem 2rem 2rem;
+
+
+//card styles
+$card-padding : 1rem;
+$card-primary-background: $gray-300;
+$card-primary-border: 2px solid $gray-300;
+$card-primary-content-color:$white-600;
+$card-primary-header-color:$white-100;
+$card-secondary-background : 2px solid $gray-300;;
+$card-secondary-border: transparent;
+$card-secondary-content-color:$white-600;
+$card-secondary-header-color:$white-100;
+
+// toasts
+$toast-padding : 1.125rem 1rem;
+$toast-background:$gray-300;
+$toast-box-shadow:0px 2px 6px rgba(98, 98, 98, 0.25);
+$toast-title-color:$white-100;
+$toast-content-color:$white-600;
+$toast-border-radius: $border-radius;
+
+//side bar
+
+$side-bar-background : rgba(24, 24, 24, 0.6);;
+//$side-bar-padding:;
+//$side-bar-item-padding:;
+$side-bar-item-color:$white-600;
+$side-bar-item-hover-background:$gray-400;
+$side-bar-item-icon-color:$white-600;
+$side-bar-item-active-icon-color:$red-500;
+$side-bar-item-active-background:$gray-400;
+$side-bar-item-active-color:$white-200;
+$side-bar-balance-heading-color:$white-200;
+$side-bar-balance-color:$white-600;
+$side-bar-social-link-color:#676767;
+
+
+// slider styles
+$slider-background:$white-200;
+$slider-point-background:$white-100;
+$slider-point-box-shadow:0px 4px 4px rgba(106, 106, 106, 0.25);
+$slider-finished-background:$red-600;
+$slider-border-radius: 4px;
+
+// toggle button styles
+$toggle-checked-background : $red-600;
+$toggle-background: $white-300;
+$toggle-point-background:$white-100;
+$toggle-poing-box-shadow:0px 4px 5px -1px rgba(0, 0, 0, 0.08);
+$toggle-border-radius: 18px;
+
+// tooltip
+
+$tooltip-background: $gray-300;
+$tooltip-color:$white-200;
+$tooltip-border-radius:$border-radius;

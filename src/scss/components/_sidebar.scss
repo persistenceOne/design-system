@@ -1,0 +1,169 @@
+.side-bar{
+  width: 274px;
+  grid-area: sidebar;
+  background: $side-bar-background;
+  backdrop-filter: blur(17px);
+  .side-bar-content{
+    position: sticky;
+    //top: 5rem;
+    //display: block !important;
+    height: 100vh;
+    padding-left: 0.25rem;
+    margin-left: -0.25rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //.nav-link-section{
+    //  border-bottom: 1px solid #2B2B2B;
+    //  padding-bottom: 1rem;
+    //}
+    .logo-container{
+      padding: 2.1875rem 0;
+      text-align: center;
+    }
+    .nav-list{
+      li{
+        list-style: none;
+        a{
+          color:$side-bar-item-color;
+        }
+        .nav-link {
+          padding: 0.75rem 2rem  0.75rem 3.375rem;
+          .icon {
+            fill: $side-bar-item-icon-color;
+            width: 17px;
+            margin-right: 1.375rem;
+            &.icon-right-arrow{
+              transition: transform 0.35s ease;
+              transform-origin: 0.5em 50%;
+              width: 12px;
+              height: 14px;
+            }
+          }
+
+          .text {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            color:$side-bar-item-color;
+          }
+          &.active{
+            border-right: 3px solid #E50913;
+            border-radius: 2px;
+            background: $side-bar-item-active-background;
+            .text{
+              color: $side-bar-item-active-color;
+            }
+            .icon {
+              fill:  $side-bar-item-active-icon-color;
+            }
+          }
+          &.opened{
+            .icon-right-arrow{
+              transform: rotate(90deg);
+            }
+          }
+        }
+      }
+      .more-list{
+        background: $side-bar-item-active-background;
+        li{
+          padding: 0.5rem 2rem  0.5rem 3.375rem;
+          color: $side-bar-item-color;
+          &:first-child{
+            padding-top: 1.25rem;
+            border-top: 1px solid #2B2B2B;
+          }
+          &:last-child{
+            padding-bottom: 1.25rem;
+          }
+        }
+      }
+    }
+    .balance-section{
+      border-top: 1px solid #2B2B2B;
+      .heading{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1.3rem;
+        color: $side-bar-balance-heading-color;
+      }
+      .balance-list {
+        padding: 1rem 1.5rem;
+        .list {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          &.first-child{
+            margin-bottom: 0.8rem;
+          }
+
+          .logo {
+            display: flex;
+            align-items: center;
+
+            img {
+              margin-right: 10px;
+            }
+
+            span {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 21px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              color:  $side-bar-balance-color;
+            }
+          }
+
+          .text {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            color: $side-bar-balance-color;
+          }
+
+          .balance {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            color: $side-bar-balance-color;
+          }
+        }
+      }
+      .social-links{
+        border-top: 1px solid #2B2B2B;
+        padding: 1rem 1.5rem;
+        .social-links-list{
+          margin: 0;
+          a{
+            margin-right:10px;
+            .icon{
+              fill: $side-bar-social-link-color;
+            }
+            &:hover{
+              .icon{
+                fill: $side-bar-balance-color;
+              }
+            }
+          }
+        }
+      }
+      .icon-button.info {
+        padding-left: 5px;
+        background: no-repeat;
+        border: none;
+        outline: none!important;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.modal-container.modal {
+  .modal-dialog {
+    .modal-content {
+      background: $modal-background;
+      .modal-header{
+        padding: 2rem 2rem 0 2rem;
+        border: $modal-header-border;
+        .modal-title{
+          font-weight: 600;
+          font-size: 24px;
+          color: $modal-header-color;
+        }
+        .btn-close{
+          background-image: url("./../images/close.svg");
+        }
+      }
+      .modal-body {
+        border: $modal-header-border;
+        font-weight: 400;
+        font-size: 14px;
+        padding: 1rem 2rem 2rem 2rem;
+        color: $modal-body-color;
+      }
+      .modal-footer{
+        border: $modal-header-border;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.form-switch .form-check-input{
+  background-color: $toggle-background;
+  border: 2px solid $toggle-background;
+  border-radius: $toggle-border-radius;
+  background-image: url("./../images/toggle.svg");
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+    background-color: $toggle-background;
+    border: 2px solid $toggle-background;
+    border-radius: $toggle-border-radius;
+    background-image: url("./../images/toggle.svg");
+  }
+   &:checked{
+    background-color: $toggle-checked-background;
+    border: 2px solid $toggle-checked-background;
+    background-image: url("./../images/toggle.svg");
+    //border-color: $toggle-background;
+    outline: 0;
+    box-shadow: none;
+}
+}

@@ -43,6 +43,7 @@
 
 .button-secondary {
   position: relative;
+  background: $body-background;
   &::after{
     content:"";
     position:absolute;
@@ -60,7 +61,7 @@
 
   &:hover {
     color: $button-outline-hover-color;
-    background: $button-outline-hover-bg;
+    background: $body-background;
     //@include gradient-bg($hover-background);
     filter: drop-shadow(0px 0px 16px #DC000A);
     &::after{
@@ -72,7 +73,7 @@
   .btn-check:focus + &,
   &:focus {
     color:$button-outline-focus-color;
-    background: $button-outline-focus-bg;
+    background: $body-background;
     &::after{
       background: $red-500;
     }
@@ -84,7 +85,7 @@
   &.active,
   .show > &.dropdown-toggle {
     color:$button-outline-focus-color;
-    background: $button-outline-focus-bg;
+    background: $body-background;
     &::after{
       background: $red-500;
     }

@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+### Buttons
+    <button className="button button-primary">button primary</button> &nbsp; &nbsp;
+    <button className="button button-secondary ">button secondary</button>&nbsp; &nbsp;
+    <button className="button button-tertiary">button-tertiary</button>
+### Input 
+    <div className="input-field-container">
+           <Form.Label>Email address</Form.Label>
+           <div className="input-validate">
+               <Form.Control type="email" className="error" placeholder="Enter email" />
+               <div className="help-text">
+                   <p>correct enter</p>
+               </div>
+           </div>
+    </div>
+Change Form.Control class name based on validation (success or error or empty)
+### Tabs
+Don't forget to add parent div with class 'tabs-container' to react bootstrap tabs.
+####Example
+    <div className="tabs-container">
+        <Tabs/>
+    </div>
+### Input field with dropdown 
+    <div className="input-field-container">
+       <div className="dropdown-input initial-child">
+           <Dropdown onSelect={handleSelect}>
+               <Dropdown.Toggle id="dropdown-basic">
+                   <img src={xprt} className="logo" alt="cc"/>
+                   {selectedToken}
+                    <img src={close} className="icon-arrow" alt="cc"/>
+               </Dropdown.Toggle>
+               <Dropdown.Menu>
+                   <div className="search-input">
+                       <input
+                           type="text"
+                           onChange={handleSearch}
+                           placeholder="search for a token"
+                       />
+                       <img src={close} className="icon-search" alt="cc"/>
+                   </div>
+                   <div className="dropdown-list">
+                       {
+                           tokenList.map((item, index) => (
+                               <Dropdown.Item eventKey={item.name}>{item.name}{item.balance}</Dropdown.Item>
+                           ))
+                       }
+                   </div>
+               </Dropdown.Menu>
+           </Dropdown>
+           <div className="input-section">
+               <input
+                   type="number"
+                   placeholder="0.00"
+               />
+               <p className="dollar-amount">0.00 </p>
+           </div>
+       </div>
+    </div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Notification Toasts
 
-## Available Scripts
+We are using react-toastify library for notifications.
 
-In the project directory, you can run:
+    const BroadCastMsg = () => (
+        <div className="toast-content">
+            <div className="title-section">
+            <Spinner animation="border" variant="light" className="toast-icon"/>
+            <p className="title">Transaction Broadcasting</p>
+            </div>
+            <p className="content">Waiting for transaction to be included in the block</p>
+        </div>
+    )
+     toast(<BroadCastMsg />)
+Change the spinner to info or warning or error icon based on requirement.
 
-### `npm start`
+###Modal
+    
+    <Modal show={show}  className="modal-container" onHide={handleClose}>
+           <Modal.Header closeButton>
+               <Modal.Title>Modal heading</Modal.Title>
+           </Modal.Header>
+           <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+    </Modal>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Cards
+     <div className="card-container">
+           <div className="card card-primary">
+               <div className="card-body">
+                   <p>Currently viewing balances on Persistence Mainnet</p>
+               </div>
+           </div>
+    </div>
+    <div className="card-container">
+           <div className="card card-secondary">
+               <div className="card-body">
+                   <p>Currently viewing balances on Persistence Mainnet</p>
+               </div>
+           </div>
+    </div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Typography
 
-### `npm test`
+##### Headings
+Add heading1, heading2 etc classNames to default Heading tags to override the default styles .
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    <p className="title">Headings </p>
+    <h1 className="heading1">hei thissdf</h1>
+    <h2 className="heading2">hei thissdf</h2>
+    <h3 className="heading3">hei thissdf</h3>
+    <h4 className="heading4">hei thissdf</h4>
+    <h5 className="heading5">hei thissdf</h5>
+    <h6 className="heading6">hei thissdf</h6>
 
-### `npm run build`
+### Slider 
+ 
+We are using react-rangeslider npm.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    import Slider from 'react-rangeslider';
+    import 'react-rangeslider/lib/index.css'
+    <div className="range-slider">
+        <Slider
+            value={rangeValue}
+            onChange={handleSliderChange}
+            min={0}
+            max={2000000}
+            step={100}
+        />
+    </div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Toggle 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+      <Form.Check
+            type="switch"
+            id="custom-switch"
+            label="Check this switch"
+        />
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

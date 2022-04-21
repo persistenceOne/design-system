@@ -1,0 +1,65 @@
+//.toast-container{
+  .Toastify{
+    .Toastify__toast-container{
+      .Toastify__toast{
+        //overflow: auto;
+        background: none;
+        box-shadow: none;
+        padding: 15px;
+        .Toastify__toast-body{
+          background: #282828;
+          box-shadow: $toast-box-shadow;
+          padding: $toast-padding;
+          border-radius: $toast-border-radius;
+          .toast-content{
+            .title-section{
+              display: flex;
+              align-items: center;
+              padding-bottom: 5px;
+              //justify-content: center;
+              .title{
+                margin: 0;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1.5;
+                color: $toast-title-color;
+              }
+              .spinner-border{
+                border-width: 0.15em;
+              }
+              .toast-icon{
+                width: 1.2rem;
+                height: 1.2rem;
+                margin-right: 10px;
+              }
+            }
+            .content{
+              margin: 0 0 0 2rem;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 150%;
+              color: $toast-content-color;
+            }
+          }
+        }
+        .Toastify__close-button{
+          position: absolute;
+          right: 10px;
+          top: 5px;
+          background: #474747;
+          opacity: 1;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+        }
+        .Toastify__close-button > svg{
+          fill: #ffffff;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+    }
+  }
+//}
