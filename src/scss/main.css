@@ -171,6 +171,14 @@
   box-shadow: 0px 0px 10px rgba(68, 172, 33, 0.25); }
 .input-field-container .input-validate .form-control.error {
   box-shadow: 0px 0px 10px rgba(219, 36, 56, 0.25); }
+.input-field-container .input-validate .input-icon {
+  position: relative; }
+  .input-field-container .input-validate .input-icon .icon-search {
+    position: absolute;
+    right: 20px;
+    top: 20px; }
+  .input-field-container .input-validate .input-icon input {
+    padding-right: 3rem; }
 .input-field-container .dropdown-input {
   background: #070B09;
   position: relative;
@@ -259,6 +267,17 @@
       text-align: right;
       padding-right: 20px;
       color: #A6A6A6; }
+  .input-field-container .dropdown-input .input-logo {
+    color: #FCFCFC;
+    font-weight: 500;
+    height: 100px;
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    padding: 0.9rem 1rem; }
+    .input-field-container .dropdown-input .input-logo .logo {
+      width: 32px;
+      margin-right: 10px; }
 
 .modal-container.modal .modal-dialog .modal-content {
   background: #282828; }

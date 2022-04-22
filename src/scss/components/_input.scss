@@ -31,6 +31,17 @@
     .form-control.error{
       box-shadow: $input-error-box-shadow;
     }
+    .input-icon{
+      position: relative;
+      .icon-search{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+      input{
+        padding-right: 3rem;
+      }
+    }
   }
   .dropdown-input{
     //display: flex;
@@ -164,6 +175,20 @@
         text-align: right;
         padding-right: 20px;
         color: $input-placeholder-color;
+      }
+    }
+
+    .input-logo{
+      color: $input-color;
+      font-weight: 500;
+      height: 100px;
+      display: flex;
+      font-size: 24px;
+      align-items: center;
+      padding: 0.9rem 1rem;
+      .logo{
+        width: 32px;
+        margin-right: 10px;
       }
     }
   }
