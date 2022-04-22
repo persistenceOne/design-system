@@ -98,10 +98,26 @@
 
         }
         .dropdown-item{
-          font-weight: 500;
-          font-size: 20px;
-          line-height: 150%;
-          color: $input-dropdown-network-color;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .logo{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            color: $input-dropdown-network-color;
+            img{
+              margin-right: 0.5rem;
+              width: 24px;
+              height: 24px;
+            }
+            .balance{
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 150%;
+              color: $input-dropdown-network-color;
+            }
+          }
           &:hover{
             background: $input-dropdown-item-hover-background;
             color:  $input-dropdown-item-hover-color;
