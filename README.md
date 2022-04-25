@@ -19,11 +19,10 @@ of designed components in other files.
     </div>
 Change Form.Control class name based on validation (success or error or empty)
 ### Tabs
-Don't forget to add parent div with class 'tabs-container' to react bootstrap tabs.
-####Example
     <div className="tabs-container">
         <Tabs/>
     </div>
+Don't forget to add parent div with class 'tabs-container' to react bootstrap tabs.
 ### Input field with dropdown
     <div className="input-field-container">
        <div className="dropdown-input initial-child">
