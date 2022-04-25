@@ -238,6 +238,9 @@
       .input-field-container .dropdown-input .dropdown .dropdown-toggle .logo {
         width: 32px;
         margin-right: 10px; }
+      .input-field-container .dropdown-input .dropdown .dropdown-toggle:hover, .input-field-container .dropdown-input .dropdown .dropdown-toggle:focus {
+        box-shadow: none;
+        outline: none; }
       .input-field-container .dropdown-input .dropdown .dropdown-toggle::after {
         display: none; }
     .input-field-container .dropdown-input .dropdown .search-input {

@@ -140,6 +140,10 @@
           width: 32px;
           margin-right: 10px;
         }
+        &:hover, &:focus{
+          box-shadow: none;
+          outline: none;
+        }
         &::after{
           display: none;
         }
