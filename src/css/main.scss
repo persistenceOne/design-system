@@ -1,0 +1,44 @@
+/*--------------------------------------------------------------
+# common styles
+--------------------------------------------------------------*/
+@import "custom";
+/*--------------------------------------------------------------
+# layout styles
+--------------------------------------------------------------*/
+@import "layout";
+/*--------------------------------------------------------------
+# pages styles
+--------------------------------------------------------------*/
+@import "pages";
+/*--------------------------------------------------------------
+# media queries styles
+--------------------------------------------------------------*/
+@import "mediaqueries";
+
+
+html , body{
+  background: radial-gradient(112.6% 112.6% at 50% -12.6%, #372627 0%, #030303 44.79%);
+}
+
+.copy-section {
+  position: relative;
+
+  .copy-result {
+    position: absolute;
+    top: -15px;
+    width: auto;
+    right: -5px;
+    font-size: 10px;
+  }
+}
+
+.copy-button {
+  outline: none !important;
+  border: 0px solid;
+  background: none;
+  margin-left: 5px;
+  .icon {
+    width: 12px;
+    height: 16px;
+  }
+}

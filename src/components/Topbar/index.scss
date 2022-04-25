@@ -1,0 +1,56 @@
+@import '../../css/custom';
+@import "../../assets/design-components/scss/variables";
+//@import "design-system/src/scss/variables";
+
+.top-bar{
+  display: flex;
+  //justify-content: flex-end;
+  padding: 25px 30px;
+  margin-bottom: 40px;
+  .top-bar-content{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    //justify-content: space-between;
+    .dropdown-toggle{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #B8B8B8;
+      padding: 0.75rem 1rem;
+      .logo{
+        margin-right: 16px;
+      }
+      @extend .dropdown-toggle;
+      .icon{
+        width: 12px;
+        margin-left: 16px;
+      }
+    }
+    .right-content {
+      display: flex;
+      margin-left: auto;
+      .connect-button {
+        padding-left: 20px;
+      }
+      .button-primary{
+        padding: 10px 16px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+      }
+      .button.connected{
+        background: $gray-500;
+        border-radius: $border-radius;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: right;
+        color: $success;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
