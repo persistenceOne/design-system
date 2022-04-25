@@ -1,4 +1,4 @@
-.popover{
+.popover.custom{
   background: $tooltip-background;
   border-radius: $tooltip-border-radius;
   .popover-body{
@@ -11,7 +11,7 @@
     color: $tooltip-color;
   }
 }
-.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::before, .bs-popover-bottom>.popover-arrow::before,
-.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::after, .bs-popover-bottom>.popover-arrow::after{
+.custom.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::before, .custom.bs-popover-bottom>.popover-arrow::before,
+.custom.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::after, .custom.bs-popover-bottom>.popover-arrow::after{
   border-bottom-color: $tooltip-background;
 }
