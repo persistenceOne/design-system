@@ -1,8 +1,9 @@
 ### Base structure for all pStake applications
 
 Don't modify design-components(assets/design-components) directly. If you want to change the style, override the style 
-of designed components in other files.
+of designed components anywhere in outside of design-components folder files.
 
+## Usage of Designed components
 ### Buttons
     <button className="button button-primary">button primary</button> &nbsp; &nbsp;
     <button className="button button-secondary ">button secondary</button>&nbsp; &nbsp;
