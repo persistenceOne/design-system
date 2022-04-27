@@ -39,10 +39,19 @@ Don't forget to add parent div with class 'tabs-container' to react bootstrap ta
                    </div>
                    <div className="dropdown-list">
                        {
-                           tokenList.map((item, index) => (
-                               <Dropdown.Item eventKey={item.name}>{item.name}{item.balance}</Dropdown.Item>
-                           ))
-                       }
+                                tokenList.map((item, index) => (
+                                    <Dropdown.Item eventKey={item.name}>
+                                        <div className="logo">
+                                            <img src={item.logo} alt={item.logo}/>
+                                            {item.name}
+                                        </div>
+                                        <div className="balance">
+                                            {item.balance}
+                                        </div>
+
+                                    </Dropdown.Item>
+                                ))
+                            }
                    </div>
                </Dropdown.Menu>
            </Dropdown>
