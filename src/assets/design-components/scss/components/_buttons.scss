@@ -43,7 +43,7 @@
 
 .button-secondary {
   position: relative;
-  background: $body-background;
+  background: transparent;
   &::after{
     content:"";
     position:absolute;
@@ -61,9 +61,8 @@
 
   &:hover {
     color: $button-outline-hover-color;
-    background: $body-background;
     //@include gradient-bg($hover-background);
-    filter: drop-shadow(0px 0px 16px #DC000A);
+    box-shadow: 0px 0px 16px #DC000A;
     &::after{
       background: radial-gradient(97.89% 704.35% at 51.96% 50%, #C14449 0.01%, #D20E17 0.02%, #181818 100%);
 
@@ -73,7 +72,6 @@
   .btn-check:focus + &,
   &:focus {
     color:$button-outline-focus-color;
-    background: $body-background;
     &::after{
       background: $red-500;
     }
@@ -85,7 +83,6 @@
   &.active,
   .show > &.dropdown-toggle {
     color:$button-outline-focus-color;
-    background: $body-background;
     &::after{
       background: $red-500;
     }
@@ -100,6 +97,21 @@
     }
   }
 }
+
+//.button-secondary{
+//  //background: transparent;
+//  //border:3px solid red;
+//  &:hover {
+//    color: $button-outline-hover-color;
+//    //background: $body-background;
+//    //@include gradient-bg($hover-background);
+//    filter: drop-shadow(0px 0px 16px #DC000A);
+//    &::after{
+//      background: radial-gradient(97.89% 704.35% at 51.96% 50%, #C14449 0.01%, #D20E17 0.02%, #181818 100%);
+//
+//    }
+//  }
+//}
 
 .button-tertiary {
   //color: $button-outline-color;

@@ -77,7 +77,7 @@ We are using react-toastify library for notifications.
      toast(<BroadCastMsg />)
 Change the spinner to info or warning or error icon based on requirement.
 
-###Modal
+### Modal
 
     <Modal show={show}  className="modal-container" onHide={handleClose}>
            <Modal.Header closeButton>

@@ -51,7 +51,7 @@
 
 .button-secondary {
   position: relative;
-  background: #1F1F1F; }
+  background: transparent; }
   .button-secondary::after {
     content: "";
     position: absolute;
@@ -67,18 +67,15 @@
     mask-composite: exclude; }
   .button-secondary:hover {
     color: #FCFCFC;
-    background: #1F1F1F;
-    filter: drop-shadow(0px 0px 16px #DC000A); }
+    box-shadow: 0px 0px 16px #DC000A; }
     .button-secondary:hover::after {
       background: radial-gradient(97.89% 704.35% at 51.96% 50%, #C14449 0.01%, #D20E17 0.02%, #181818 100%); }
   .btn-check:focus + .button-secondary, .button-secondary:focus {
-    color: #FCFCFC;
-    background: #1F1F1F; }
+    color: #FCFCFC; }
     .btn-check:focus + .button-secondary::after, .button-secondary:focus::after {
       background: #811318; }
   .btn-check:checked + .button-secondary, .btn-check:active + .button-secondary, .button-secondary:active, .button-secondary.active, .show > .button-secondary.dropdown-toggle {
-    color: #FCFCFC;
-    background: #1F1F1F; }
+    color: #FCFCFC; }
     .btn-check:checked + .button-secondary::after, .btn-check:active + .button-secondary::after, .button-secondary:active::after, .button-secondary.active::after, .show > .button-secondary.dropdown-toggle::after {
       background: #811318; }
   .button-secondary:disabled, .button-secondary.disabled {
@@ -162,6 +159,9 @@
     font-weight: 400;
     font-size: 16px; }
   .input-field-container .form-control:focus {
+    background-color: #070B09;
+    color: #FCFCFC;
+    border-color: #070B09;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25); }
 .input-field-container .input-validate .help-text {
   color: #ECECEC;

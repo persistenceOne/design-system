@@ -16,6 +16,9 @@
         font-size: 16px;
       }
     &:focus{
+      background-color: $input-background;
+      color: $input-color;
+      border-color: $input-background;
       box-shadow: $input-focus-box-shadow;
     }
   }
