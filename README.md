@@ -26,7 +26,10 @@ Don't forget to add parent div with class 'tabs-container' to react bootstrap ta
                <Dropdown.Toggle id="dropdown-basic">
                    <img src={xprt} className="logo" alt="cc"/>
                    {selectedToken}
-                    <img src={close} className="icon-arrow" alt="cc"/>
+                    <Icon
+                        icon="down-arrow"
+                        viewClass="arrow"
+                    />
                </Dropdown.Toggle>
                <Dropdown.Menu>
                    <div className="search-input">
@@ -35,7 +38,10 @@ Don't forget to add parent div with class 'tabs-container' to react bootstrap ta
                            onChange={handleSearch}
                            placeholder="search for a token"
                        />
-                       <img src={close} className="icon-search" alt="cc"/>
+                        <Icon
+                            icon="down-arrow"
+                            viewClass="arrow"
+                        />
                    </div>
                    <div className="dropdown-list">
                        {
