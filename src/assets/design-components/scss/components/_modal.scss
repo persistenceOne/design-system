@@ -12,6 +12,9 @@
         }
         .btn-close{
           background-image: url("./../images/close.svg");
+          &:focus{
+            box-shadow: none;
+          }
         }
       }
       .modal-body {

@@ -91,11 +91,11 @@
       margin-top: 1rem;
       border: 0px solid; }
 
-.dropdown-input.initial-child {
+.dropdown-input.initial-child, .logo-input.initial-child {
   margin-bottom: 5px; }
-.dropdown-input.swap-next {
-  margin-top: 5px;
-  margin-bottom: 1rem; }
+.dropdown-input.swap-next, .logo-input.swap-next {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
 
 /*--------------------------------------------------------------
 # media queries styles
