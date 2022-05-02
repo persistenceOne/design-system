@@ -19,6 +19,26 @@ Don't forget to add parent div with class 'tabs-container' to react bootstrap ta
     <div className="tabs-container">
         <Tabs/>
     </div>
+
+### Input field with only logo 
+    <div className="input-field-container flex-fill">
+        <div className="logo-input swap-next">
+            <div className="input-logo-section">
+                <div className="input-logo">
+                    <img src={stkXprt} className="logo" alt="cc"/>
+                    stkXPRT
+                </div>
+                <p className="available"><span className="text">Available: </span> <span className="value">0.00</span> </p>
+            </div>
+            <div className="input-section">
+                <input
+                    type="number"
+                    placeholder="0.00"
+                />
+                <p className="dollar-amount">0.00 </p>
+            </div>
+        </div>
+    </div>
 ### Input field with dropdown 
     <div className="input-field-container">
        <div className="dropdown-input initial-child">
