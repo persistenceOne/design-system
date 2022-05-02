@@ -1,14 +1,8 @@
-### Base structure for all pStake applications
-
-Don't modify design-components(assets/design-components) directly. If you want to change the style, override the style 
-of designed components anywhere in outside of design-components folder files.
-
-## Usage of Designed components
 ### Buttons
     <button className="button button-primary">button primary</button> &nbsp; &nbsp;
     <button className="button button-secondary ">button secondary</button>&nbsp; &nbsp;
     <button className="button button-tertiary">button-tertiary</button>
-### Input
+### Input 
     <div className="input-field-container">
            <Form.Label>Email address</Form.Label>
            <div className="input-validate">
@@ -20,18 +14,42 @@ of designed components anywhere in outside of design-components folder files.
     </div>
 Change Form.Control class name based on validation (success or error or empty)
 ### Tabs
+Don't forget to add parent div with class 'tabs-container' to react bootstrap tabs.
+####Example
     <div className="tabs-container">
         <Tabs/>
     </div>
-Don't forget to add parent div with class 'tabs-container' to react bootstrap tabs.
-### Input field with dropdown
+
+### Input field with only logo 
+    <div className="input-field-container flex-fill">
+        <div className="logo-input swap-next">
+            <div className="input-logo-section">
+                <div className="input-logo">
+                    <img src={stkXprt} className="logo" alt="cc"/>
+                    stkXPRT
+                </div>
+                <p className="available"><span className="text">Available: </span> <span className="value">0.00</span> </p>
+            </div>
+            <div className="input-section">
+                <input
+                    type="number"
+                    placeholder="0.00"
+                />
+                <p className="dollar-amount">0.00 </p>
+            </div>
+        </div>
+    </div>
+### Input field with dropdown 
     <div className="input-field-container">
        <div className="dropdown-input initial-child">
            <Dropdown onSelect={handleSelect}>
                <Dropdown.Toggle id="dropdown-basic">
                    <img src={xprt} className="logo" alt="cc"/>
                    {selectedToken}
-                    <img src={close} className="icon-arrow" alt="cc"/>
+                    <Icon
+                        icon="down-arrow"
+                        viewClass="arrow"
+                    />
                </Dropdown.Toggle>
                <Dropdown.Menu>
                    <div className="search-input">
@@ -40,14 +58,26 @@ Don't forget to add parent div with class 'tabs-container' to react bootstrap ta
                            onChange={handleSearch}
                            placeholder="search for a token"
                        />
-                       <img src={close} className="icon-search" alt="cc"/>
+                        <Icon
+                            icon="down-arrow"
+                            viewClass="arrow"
+                        />
                    </div>
                    <div className="dropdown-list">
                        {
-                           tokenList.map((item, index) => (
-                               <Dropdown.Item eventKey={item.name}>{item.name}{item.balance}</Dropdown.Item>
-                           ))
-                       }
+                                tokenList.map((item, index) => (
+                                    <Dropdown.Item eventKey={item.name}>
+                                        <div className="logo">
+                                            <img src={item.logo} alt={item.logo}/>
+                                            {item.name}
+                                        </div>
+                                        <div className="balance">
+                                            {item.balance}
+                                        </div>
+
+                                    </Dropdown.Item>
+                                ))
+                            }
                    </div>
                </Dropdown.Menu>
            </Dropdown>
@@ -77,8 +107,8 @@ We are using react-toastify library for notifications.
      toast(<BroadCastMsg />)
 Change the spinner to info or warning or error icon based on requirement.
 
-### Modal
-
+###Modal
+    
     <Modal show={show}  className="modal-container" onHide={handleClose}>
            <Modal.Header closeButton>
                <Modal.Title>Modal heading</Modal.Title>
@@ -115,8 +145,8 @@ Add heading1, heading2 etc classNames to default Heading tags to override the de
     <h5 className="heading5">hei thissdf</h5>
     <h6 className="heading6">hei thissdf</h6>
 
-### Slider
-
+### Slider 
+ 
 We are using react-rangeslider npm.
 
     import Slider from 'react-rangeslider';
@@ -131,10 +161,11 @@ We are using react-rangeslider npm.
         />
     </div>
 
-### Toggle
+### Toggle 
 
       <Form.Check
             type="switch"
             id="custom-switch"
             label="Check this switch"
         />
+
